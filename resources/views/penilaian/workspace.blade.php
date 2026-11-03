@@ -220,7 +220,7 @@
             // Sama dengan MaturityAssessor::resultLevel()
             const resultLevel = (code) => {
                 if (code === 'F') return level;
-                if (level === startLevel) return 0;
+                if (level === startLevel) return 1;
                 return level - 1;
             };
 

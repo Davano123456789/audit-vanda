@@ -34,7 +34,7 @@
         </form>
         <p class="border-t border-gray-100 px-4 py-3 text-xs text-gray-500">
             Penilaian dimulai dari Level 1 &amp; 2. Jika nilai seluruh atribut pada satu level mencapai rating
-            <strong>F (≥ 85%)</strong>, penilaian dilanjutkan ke level berikutnya. Jika Level 1 &amp; 2 tidak mencapai F, hasilnya Level 0.
+            <strong>F (≥ 85%)</strong>, penilaian dilanjutkan ke level berikutnya. Jika Level 1 &amp; 2 tidak mencapai F, hasilnya Level 1.
         </p>
     </div>
 

@@ -134,6 +134,7 @@ class MasterDataTest extends TestCase
     public function test_hapus_pertanyaan_merapikan_nomor(): void
     {
         $first = Question::where('process_code', 'IM')->where('attribute_code', 'PP')->where('number', 1)->first();
+        $first->answers()->delete(); // pertanyaan yang sudah dijawab tidak bisa dihapus
 
         $this->delete("/master/pertanyaan/{$first->id}")->assertSessionHas('success');
 

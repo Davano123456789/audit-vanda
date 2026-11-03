@@ -28,7 +28,7 @@ class MaturityAssessor
 
     /**
      * Level hasil ketika penilaian berhenti di $level dengan rating $rating.
-     * Level 1 & 2 yang tidak lulus (P / L / N) langsung hasil Level 0.
+     * Level 1 & 2 yang tidak lulus (P / L / N) langsung hasil Level 1.
      */
     public static function resultLevel(int $level, string $rating): int
     {
@@ -37,7 +37,7 @@ class MaturityAssessor
         }
 
         if ($level === config('itil.start_level')) {
-            return 0;
+            return 1;
         }
 
         return $level - 1;

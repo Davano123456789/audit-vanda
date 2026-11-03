@@ -155,7 +155,7 @@ class PenilaianTest extends TestCase
         $this->assertEquals(50, $result['history'][2]['percent']);
         $this->assertSame('P', $result['history'][2]['rating']);
         $this->assertSame(MaturityAssessor::COMPLETED, $result['status']);
-        $this->assertSame(0, $result['result_level']);
+        $this->assertSame(1, $result['result_level']);
     }
 
     /** ASS05: nilai di atas batas (>= 85%) lanjut ke level berikutnya */
@@ -186,9 +186,9 @@ class PenilaianTest extends TestCase
         $this->assertSame('L', Itil::rating(84.99));
         $this->assertSame('F', Itil::rating(85));
 
-        $this->assertSame(0, MaturityAssessor::resultLevel(2, 'N'));
-        $this->assertSame(0, MaturityAssessor::resultLevel(2, 'P'));
-        $this->assertSame(0, MaturityAssessor::resultLevel(2, 'L'));
+        $this->assertSame(1, MaturityAssessor::resultLevel(2, 'N'));
+        $this->assertSame(1, MaturityAssessor::resultLevel(2, 'P'));
+        $this->assertSame(1, MaturityAssessor::resultLevel(2, 'L'));
         $this->assertSame(2, MaturityAssessor::resultLevel(3, 'L'));
         $this->assertSame(4, MaturityAssessor::resultLevel(5, 'N'));
 

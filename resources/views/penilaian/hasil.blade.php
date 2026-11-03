@@ -49,10 +49,6 @@
             </div>
         </div>
 
-        <div class="card mb-6 p-5 text-sm text-gray-600">
-            {{ config("itil.levels.{$resultLevel}.description") }}
-        </div>
-
         {{-- Hasil per level & per atribut --}}
         <div class="card mb-6">
             <div class="card-header">
